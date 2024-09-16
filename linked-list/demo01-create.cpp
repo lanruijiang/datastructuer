@@ -30,7 +30,7 @@ Link *initLink(Link *p ,int num)
         // temp指向下一个结点（也就是a),为下次添加结点做准备
         temp = temp->next;
     }
-    return p
+    return p;
 }
 void display(Link *p)
 {
