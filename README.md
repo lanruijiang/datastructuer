@@ -2,8 +2,8 @@
 
 
  1.安装git<br>
- 2.终端进入指定拉取路径
- 3.git clone http:......git
+ 2.终端进入指定拉取路径<br>
+ 3.git clone http:......git<br>
 
 上传代码：
 先设定项目配置，只需要执行一次
