@@ -28,13 +28,15 @@ void initTable(Table *t)
 void insertTable(Table *t, int elem, int add)
 {
     int i;
-    // 如果插入元素位置比整张表的长度+1还大（如果相等，是尾随的情况），或者插入的位置本身不存在，程序作为提示并自动退出
+    // 如果插入元素位置比整张表的长度+1还大（如果相等，是尾随的情况），
+    // 或者插入的位置本身不存在，程序作为提示并自动退出
     if (add > t->length + 1 || add < 1)
     {
         printf("插入位置有问题\n");
         return;
     }
-    // 做插入操作时，首先需要看顺序表是否有多余的存储空间提供给插入的元素，如果没有，需要申请
+    // 做插入操作时，首先需要看顺序表是否有多余的存储空间提供给插入的元素，
+    // 如果没有，需要申请
     if (t->length == t->size)
     {
         t->head = (int *)realloc(t->head, (t->size + 1) * sizeof(int));

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
 #define Size 5 //对Size进行宏定义，表示顺序表的最大容量
 typedef struct{
     int* head;
@@ -29,6 +30,7 @@ void displayTable(Table t) {
     printf("\n");
 }
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     int i;
     Table t = { NULL,0,0 };
     initTable(&t);
