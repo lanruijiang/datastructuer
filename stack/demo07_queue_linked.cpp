@@ -23,7 +23,7 @@ QNode *enQueue(QNode *rear, int data)
     enElem->data = data;
     enElem->next = NULL;
     // 2、新节点与rear节点建立逻辑关系
-    rear->next = enElem;
+   rear->next = enElem;
     // 3、rear指向新节点
     rear = enElem;
     // 返回新的rear，为后续新元素入队做准备
@@ -56,7 +56,7 @@ int main()
 {
     SetConsoleOutputCP(CP_UTF8);
     QNode *queue = NULL, *top = NULL, *rear = NULL;
-    queue = top = rear = initQueue(); // 创建头结点
+    top = rear = initQueue(); // 创建头结点
     // 向链队列中添加结点，使用尾插法添加的同时，队尾指针需要指向链表的最后一个元素
     rear = enQueue(rear, 1);
     rear = enQueue(rear, 2);
