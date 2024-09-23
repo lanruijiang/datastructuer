@@ -45,7 +45,6 @@ int pop(Stack *s)
 // 将元素压入栈底
 void insertAtBottom(Stack *s, int data)
 {
-    printf("top = %d == data == %d \n" , s->top , data);
     // 当栈为空时，直接将元素入栈
     if (s->top == -1)
     {
@@ -55,8 +54,6 @@ void insertAtBottom(Stack *s, int data)
     {
         // ① 取栈底元素
         int topdata = pop(s);
-         printf("top = %d \n" , s->top);
-            printf("topdata = %d \n" , topdata);
         insertAtBottom(s, data);
         // ② 将之前的元素逐个入栈
         push(s, topdata);
@@ -71,10 +68,8 @@ void reverseStack(Stack *s)
     {
         // ① 不断地取栈顶元素
         int topdata = pop(s); // 4 3 2 1
-            //   printf("+++++++++++++++++> %d ===> top == %d \n"  ,topdata  , s->top);
         reverseStack(s);
         // ② 将取出的栈顶元素依次压入栈底
-        // printf("==++++==> %d \n"  ,topdata);
         insertAtBottom(s, topdata);
     }
 }

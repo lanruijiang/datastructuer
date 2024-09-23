@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <windows.h>
-#include <windows.h>
 // 元素elem进栈
 int push(int *a, int top, int elem)
 {
