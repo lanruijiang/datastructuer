@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <windows.h>
-#define MAX_LEN 100 // 规定数组的长度
+#define MAX_LEN 3 // 规定数组的长度
 // 实现入队操作
 int enQueue(int *a, int rear, int data)
 {
