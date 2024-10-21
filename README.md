@@ -23,3 +23,7 @@ git config --global user.email username
 liner-list 线性表
 linked-list 链表
 double-list 双链表
+c-demo c语言基础学习代码
+stack 栈和串
+stream 字符串
+array 数组
