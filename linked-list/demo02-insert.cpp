@@ -6,7 +6,7 @@ typedef struct link
     int elem;
     struct link *next;
 } Link;
-Link *initLink(Link *p , int num)
+Link *initLink(Link *p, int num)
 {
     int i;
     // 1、创建头指针
@@ -45,31 +45,36 @@ void display(Link *p)
     printf("\n");
 }
 
-Link* insertElem(Link* p, int elem, int add) {
-    if (add == 1) {
-        //创建插入结点c
-        Link* c = (Link*)malloc(sizeof(Link));
+Link *insertElem(Link *p, int elem, int add)
+{
+    if (add == 1)
+    {
+        // 创建插入结点c
+        Link *c = (Link *)malloc(sizeof(Link));
         c->elem = elem;
         c->next = p;
         p = c;
         return p;
     }
-    else {
+    else
+    {
         int i;
-        Link* c = NULL;
-        Link* temp = p;//创建临时结点temp
-        //首先找到要插入位置的上一个结点
-        for (i = 1; i < add-1; i++) {
+        Link *c = NULL;
+        Link *temp = p; // 创建临时结点temp
+        // 首先找到要插入位置的上一个结点
+        for (i = 1; i < add - 1; i++)
+        {
             temp = temp->next;
-            if (temp == NULL) {
+            if (temp == NULL)
+            {
                 printf("插入位置无效\n");
                 return p;
             }
         }
-        //创建插入结点c
-        c = (Link*)malloc(sizeof(Link));
+        // 创建插入结点c
+        c = (Link *)malloc(sizeof(Link));
         c->elem = elem;
-        //向链表中插入结点
+        // 向链表中插入结点
         c->next = temp->next;
         temp->next = c;
         return p;
@@ -80,9 +85,9 @@ int main()
     Link *p = NULL;
     printf("初始化链表为：\n");
     // 创建链表{1,2,3,4}
-    p = initLink(p ,10);
-    p = insertElem(p , 9527 , 6);
+    p = initLink(p, 10);
+    p = insertElem(p, 9527, 6);
     display(p);
-   
+
     return 0;
 }
