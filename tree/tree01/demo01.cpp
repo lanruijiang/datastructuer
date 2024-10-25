@@ -1,9 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(){
+int main()
+{
     char name[20] = "I like China";
-    printf("%s \n" , name);
-    return 1;
 
+    for (int i = 0; i < 20; i++)
+    {
+        char c = name[i];
+        printf("%d == %c \n", i + 1, c);
+    }
+
+    return 1;
 }
